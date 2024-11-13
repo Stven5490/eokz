@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class tiendaEokzApp extends JFrame {
-    public tiendaEokzApp(){
+   public tiendaEokzApp(){
         setTitle("Eokz // American Closeth");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

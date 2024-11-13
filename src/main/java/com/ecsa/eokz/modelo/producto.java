@@ -11,6 +11,10 @@ public abstract class producto {
         this.precio = precio;
         this.cantidad = cantidad;
     }
+
+    public producto(int codigo, String nombre, double precio, int cantidad, String talla) {
+    }
+
     public int getCodigo() {
         return codigo;
     }
