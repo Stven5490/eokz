@@ -1,14 +1,14 @@
 package com.ecsa.eokz.modelo;
 
 public abstract class producto {
-    private int codigo;
-    private String nombre;
-    private int precion;
-    private int cantidad;
-    public producto(int codigo, String nombre, int precion, int cantidad) {
+    protected int codigo;
+    protected String nombre;
+    protected int precio;
+    protected int cantidad;
+    public producto(int codigo, String nombre, int precio, int cantidad) {
         this.codigo = codigo;
         this.nombre = nombre;
-        this.precion = precion;
+        this.precio = precio;
         this.cantidad = cantidad;
     }
     public int getCodigo() {
@@ -23,11 +23,11 @@ public abstract class producto {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public int getPrecion() {
-        return precion;
+    public int getPrecio() {
+        return precio;
     }
-    public void setPrecion(int precion) {
-        this.precion = precion;
+    public void setPrecio(int precion) {
+        this.precio = precion;
     }
     public int getCantidad() {
         return cantidad;
