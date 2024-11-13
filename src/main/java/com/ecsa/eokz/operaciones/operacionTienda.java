@@ -1,5 +1,5 @@
 package com.ecsa.eokz.operaciones;
 
-public class operacionTienda {
-    void ejecutar(){};
+public interface  operacionTienda {
+    void ejecutar();
 }
