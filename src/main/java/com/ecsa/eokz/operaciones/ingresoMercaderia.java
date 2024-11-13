@@ -2,9 +2,9 @@ package com.ecsa.eokz.operaciones;
 
 import com.ecsa.eokz.modelo.producto;
 
-public class ingresoMercaderia extends operacionTienda{
+public class ingresoMercaderia implements operacionTienda{
     private producto producto;
-    private int cantidad,
+    private int cantidad;
 
     public ingresoMercaderia(com.ecsa.eokz.modelo.producto producto, int cantidad) {
         this.producto = producto;
