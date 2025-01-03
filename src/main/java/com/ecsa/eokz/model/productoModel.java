@@ -6,16 +6,16 @@ import jakarta.persistence.*;
 public class productoModel {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String nombre;
     private int precio;
     private int stock;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -43,7 +43,7 @@ public class productoModel {
         this.stock = stock;
     }
 
-    public productoModel(Long id, String nombre, int precio, int stock) {
+    public productoModel(Integer id, String nombre, int precio, int stock) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;

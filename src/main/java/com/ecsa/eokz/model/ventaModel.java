@@ -7,42 +7,33 @@ import java.time.LocalDate;
 public class ventaModel {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String producto;
-    private int cantidad;
-    private int precio;
+    private Integer id;
+    private String cliente;
+    private int total;
     private LocalDate fecha;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getProducto() {
-        return producto;
+    public String getCliente() {
+        return cliente;
     }
 
-    public void setProducto(String producto) {
-        this.producto = producto;
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getTotal() {
+        return total;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public void setTotal(int total) {
+        this.total = total;
     }
 
     public LocalDate getFecha() {
@@ -50,6 +41,13 @@ public class ventaModel {
     }
 
     public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public ventaModel(Integer id, String cliente, int total, LocalDate fecha) {
+        this.id = id;
+        this.cliente = cliente;
+        this.total = total;
         this.fecha = fecha;
     }
 }

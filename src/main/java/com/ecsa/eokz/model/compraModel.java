@@ -1,24 +1,32 @@
 package com.ecsa.eokz.model;
 
-import jakarta.persistence.*;
-
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class compraModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String producto;
-    private int cantidad;
+    private Integer cantidad;
     private int precio;
-    private LocalDate fecha;
+    public compraModel(){}
 
-    public Long getId() {
+    public compraModel(Integer id, String producto, Integer cantidad, int precio) {
+        this.id = id;
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -30,11 +38,11 @@ public class compraModel {
         this.producto = producto;
     }
 
-    public int getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -44,13 +52,5 @@ public class compraModel {
 
     public void setPrecio(int precio) {
         this.precio = precio;
-    }
-
-    public LocalDate getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
     }
 }
