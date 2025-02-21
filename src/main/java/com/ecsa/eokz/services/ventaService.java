@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class ventaService {
     @Autowired
@@ -21,5 +23,8 @@ public class ventaService {
         venta.setIVA(ventaDTO.getIVA());
         venta.setValorRecibido(ventaDTO.getValorRecibido());
         ventaRepository.save(venta);
+    }
+    public List<venta> obtenerTodos(){
+        return ventaRepository.findAll();
     }
 }

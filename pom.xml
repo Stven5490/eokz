@@ -70,6 +70,18 @@
             <version>1.5.12</version>
         </dependency>
 
+        <!-- Logback - core -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+
+        <!-- slf4j API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
         <!-- Javax Annotatio API -->
         <dependency>
             <groupId>javax.annotation</groupId>
