@@ -14,20 +14,17 @@ public class securityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
-                .authorizeRequests()
-                    .antMatchers("/productos").authenticated()
-                    .anyRequest().permitAll()
-                .and()
-                .formLogin()
-                    .loginPage("/login")
-                    .permitAll()
-                .and()
-                .formLogin()
-                    .loginPage("/login")
-                    .permitAll()
-                .and()
-                .logout
-                    .permitAll();
+                .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers("/productos").authenticated()
+                        .anyRequest().permitAll()
+                )
+                .formLogin((form) -> form
+                        .loginPage("/login")
+                        .permitAll()
+                )
+                .logout((logout) -> logout
+                        .permitAll()
+                );
         return http.build();
     }
     @Bean
