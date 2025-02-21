@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ventas</title>
+</head>
+<body>
+<h1>Ventas</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Fecha</th>
+        <th>Valor Total</th>
+        <th>IVA</th>
+        <th>Valor Recibido</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="venta : ${ventas}">
+        <td th:text="${venta.fecha}"></td>
+        <td th:text="${venta.valorTotal}"></td>
+        <td th:text="${venta.iva}"></td>
+        <td th:text="${venta.valorRecibido}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
